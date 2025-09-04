@@ -1,4 +1,5 @@
 base_path = '/home/felpelon/dust_visualization'
+output_dir = 'grads/Mapas'
 
 year = 2019
 variable_name = PM
@@ -43,7 +44,7 @@ While (year <= 2025)
         'draw string 2 8 Ano: 'year''
         'run 'base_path'/src/cbarn.gs'
         fname =''est'_850hpa.png'
-        cmd = 'printim 'base_path'/grads/Mapas/'year'/PM10/America_Latina/'fname
+        cmd = 'printim 'base_path'/'output_dir'/'year'/PM10/America_Latina/'fname
         cmd
         'clear'
         'close 1'

@@ -1,4 +1,5 @@
 base_path = '/home/felpelon/dust_visualization'
+output_dir = grads/Mapas
 
 mlist.1 = 1                                                            
 mlist.2 = 2
@@ -100,7 +101,7 @@ while (year <= 2025)
       fname =''regiao'_'year'_'time'_'mes'_850hpa.png'
 *por pressão
 *fname = ''regiao'_850hpa_'time''mes'_'year'.png'
-      cmd = 'printim 'base_path'/grads/Mapas/'year'/PM10/America_Latina/'fname
+      cmd = 'printim 'base_path'/'output_dir'/'year'/PM10/America_Latina/'fname
       cmd
 
     time = time + 1

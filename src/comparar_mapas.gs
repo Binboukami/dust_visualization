@@ -1,4 +1,5 @@
 base_path = '/home/felpelon/dust_visualization'
+output_dir = 'grads/Mapas'
 
 year = 2019
 variable_name = PM
@@ -107,7 +108,7 @@ while (year <= 2019)
     endwhile
 
     fname =''regiao'_'year'_comparar_850hpa.png'
-    cmd = 'printim 'base_path'/grads/Mapas/'year'/PM10/America_Latina/'fname' x3000 y2000'
+    cmd = 'printim 'base_path'/'output_dir'/'year'/PM10/America_Latina/'fname' x3000 y2000'
     cmd
     'close 1'
     year = year + 1
