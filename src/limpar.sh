@@ -1,4 +1,4 @@
-base_path = /home/felpelon
+base_path = /home/felpelon/dust_visualization
 year=2018
 
 while [ $year -le 2025 ]

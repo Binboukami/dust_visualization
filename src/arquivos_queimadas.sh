@@ -1,4 +1,4 @@
-base_path = /home/felpelon
+base_path = /home/felpelon/dust_visualization
 
 year=2018
 variable_name="PM"
@@ -11,7 +11,7 @@ do
     cdo mergetime ${base_path}/dust/${year}/${year}-08-${variable_name}.nc ${base_path}/dust/${year}/${year}-09-${variable_name}.nc ${base_path}/dust/${year}/${year}-10-${variable_name}.nc ${base_path}/dust/${year}/${year}-queimada.nc
     
     echo "fazendo regrid..."
-    cdo remapbil,${base_path}/grads/data/grid.txt ${base_path}/dust/${year}/${year}-queimada.nc ${base_path}/dust/${year}/${year}-queimada-regrid.nc
+    cdo remapbil,${base_path}/src/grid.txt ${base_path}/dust/${year}/${year}-queimada.nc ${base_path}/dust/${year}/${year}-queimada-regrid.nc
     
     echo "renomeando variável..."
     cdo chvar,M2TMNXAER_5_12_4_DUSMASS,dusmass ${base_path}/dust/${year}/${year}-queimada-regrid.nc ${base_path}/dust/${year}/${year}-queimada-regrid-renamed.nc

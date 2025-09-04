@@ -1,4 +1,4 @@
-base_path = /home/felpelon
+base_path = /home/felpelon/dust_visualization
 
 mon=12
 year=2018
@@ -18,7 +18,7 @@ do
 
     echo "fazendo regrid..."
 
-    cdo remapbil,${base_path}/grads/data/grid.txt ${base_path}/dust/${year}/${year}-${variable_name}.nc ${base_path}/dust/${year}/${year}-${variable_name}-regrid.nc
+    cdo remapbil,${base_path}/src/grid.txt ${base_path}/dust/${year}/${year}-${variable_name}.nc ${base_path}/dust/${year}/${year}-${variable_name}-regrid.nc
 
     echo "renomeando variável..."
 
@@ -40,7 +40,7 @@ do
     cdo mergetime ${base_path}/dust/$((year-1))/$((year-1))-12-${variable_name}.nc ${base_path}/dust/${year}/${year}-01-${variable_name}.nc ${base_path}/dust/${year}/${year}-02-${variable_name}.nc ${base_path}/dust/${year}/${year}-verao.nc
     
     echo "fazendo regrid..."
-    cdo remapbil,${base_path}/grads/data/grid.txt ${base_path}/dust/${year}/${year}-verao.nc ${base_path}/dust/${year}/${year}-verao-regrid.nc
+    cdo remapbil,${base_path}/src/grid.txt ${base_path}/dust/${year}/${year}-verao.nc ${base_path}/dust/${year}/${year}-verao-regrid.nc
     
     echo "renomeando variável..."
     cdo chvar,M2TMNXAER_5_12_4_DUSMASS,dusmass ${base_path}/dust/${year}/${year}-verao-regrid.nc ${base_path}/dust/${year}/${year}-verao-regrid-renamed.nc
@@ -61,7 +61,7 @@ do
     cdo mergetime ${base_path}/dust/${year}/${year}-03-${variable_name}.nc ${base_path}/dust/${year}/${year}-04-${variable_name}.nc ${base_path}/dust/${year}/${year}-05-${variable_name}.nc ${base_path}/dust/${year}/${year}-outono.nc
     
     echo "fazendo regrid..."
-    cdo remapbil,${base_path}/grads/data/grid.txt ${base_path}/dust/${year}/${year}-outono.nc ${base_path}/dust/${year}/${year}-outono-regrid.nc
+    cdo remapbil,${base_path}/src/grid.txt ${base_path}/dust/${year}/${year}-outono.nc ${base_path}/dust/${year}/${year}-outono-regrid.nc
     
     echo "renomeando variável..."
     cdo chvar,M2TMNXAER_5_12_4_DUSMASS,dusmass ${base_path}/dust/${year}/${year}-outono-regrid.nc ${base_path}/dust/${year}/${year}-outono-regrid-renamed.nc
@@ -81,7 +81,7 @@ do
     cdo mergetime ${base_path}/dust/${year}/${year}-06-${variable_name}.nc ${base_path}/dust/${year}/${year}-07-${variable_name}.nc ${base_path}/dust/${year}/${year}-08-${variable_name}.nc ${base_path}/dust/${year}/${year}-inverno.nc
     
     echo "fazendo regrid..."
-    cdo remapbil,${base_path}/grads/data/grid.txt ${base_path}/dust/${year}/${year}-inverno.nc ${base_path}/dust/${year}/${year}-inverno-regrid.nc
+    cdo remapbil,${base_path}/src/grid.txt ${base_path}/dust/${year}/${year}-inverno.nc ${base_path}/dust/${year}/${year}-inverno-regrid.nc
     
     echo "renomeando variável..."
     cdo chvar,M2TMNXAER_5_12_4_DUSMASS,dusmass ${base_path}/dust/${year}/${year}-inverno-regrid.nc ${base_path}/dust/${year}/${year}-inverno-regrid-renamed.nc
@@ -102,7 +102,7 @@ do
     cdo mergetime ${base_path}/dust/${year}/${year}-09-${variable_name}.nc ${base_path}/dust/${year}/${year}-10-${variable_name}.nc ${base_path}/dust/${year}/${year}-11-${variable_name}.nc ${base_path}/dust/${year}/${year}-primavera.nc
     
     echo "fazendo regrid..."
-    cdo remapbil,${base_path}/grads/data/grid.txt ${base_path}/dust/${year}/${year}-primavera.nc ${base_path}/dust/${year}/${year}-primavera-regrid.nc
+    cdo remapbil,${base_path}/src/grid.txt ${base_path}/dust/${year}/${year}-primavera.nc ${base_path}/dust/${year}/${year}-primavera-regrid.nc
     
     echo "renomeando variável..."
     cdo chvar,M2TMNXAER_5_12_4_DUSMASS,dusmass ${base_path}/dust/${year}/${year}-primavera-regrid.nc ${base_path}/dust/${year}/${year}-primavera-regrid-renamed.nc

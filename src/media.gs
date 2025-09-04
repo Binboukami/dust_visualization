@@ -1,4 +1,4 @@
-base_path = /home/felpelon
+base_path = '/home/felpelon/dust_visualization'
 
 monname.1 = "janeiro"
 monname.2 = "fevereiro"

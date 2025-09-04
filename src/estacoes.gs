@@ -1,4 +1,4 @@
-base_path = /home/felpelon
+base_path = '/home/felpelon/dust_visualization'
 
 year = 2019
 variable_name = PM
@@ -29,7 +29,7 @@ While (year <= 2025)
         'set gxout vector'
         'set arrscl 'p''
         'd skip(u,'q');skip(v,'q')'
-        'draw shp 'base_path'/grads/data/br.shp'
+        'draw shp 'base_path'/src/br.shp'
         'draw string 4 8 Estacao: 'est''
         'draw string 6 8 Pressao: 850hPa'
         'd aave(dusmass, lon=-83, lon=-29, lat=-56, lat=11)'
@@ -41,7 +41,7 @@ While (year <= 2025)
         endif
         'draw string 9.15 8 PM10'
         'draw string 2 8 Ano: 'year''
-        'run 'base_path'/grads/data/cbarn.gs'
+        'run 'base_path'/src/cbarn.gs'
         fname =''est'_850hpa.png'
         cmd = 'printim 'base_path'/grads/Mapas/'year'/PM10/America_Latina/'fname
         cmd

@@ -1,4 +1,4 @@
-base_path = /home/felpelon
+base_path = '/home/felpelon/dust_visualization'
 
 mlist.1 = 1                                                            
 mlist.2 = 2
@@ -81,7 +81,7 @@ while (year <= 2025)
       'd skip(u,'q');skip(v,'q')'
       
 
-      'draw shp 'base_path'/grads/data/br.shp'
+      'draw shp 'base_path'/src/br.shp'
       montext = monname.tval
       'draw string 4 8 Mes: 'mes''
       'draw string 6 8 Pressao: 850hPa'
@@ -94,7 +94,7 @@ while (year <= 2025)
       endif
       'draw string 9.15 8 PM10'
       'draw string 2 8 Ano: 'year''
-      'run 'base_path'/grads/data/cbarn.gs'
+      'run 'base_path'/src/cbarn.gs'
 
 *por mês
       fname =''regiao'_'year'_'time'_'mes'_850hpa.png'

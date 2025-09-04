@@ -1,4 +1,4 @@
-base_path = /home/felpelon
+base_path = '/home/felpelon/dust_visualization'
 
 'sdfopen 'base_path'/Vento/test_fluxo_de_massa_renamed2.nc'
 'set lat -56 11'

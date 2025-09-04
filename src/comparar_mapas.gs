@@ -1,4 +1,4 @@
-base_path = /home/felpelon
+base_path = '/home/felpelon/dust_visualization'
 
 year = 2019
 variable_name = PM
@@ -61,7 +61,7 @@ while (year <= 2019)
         'set grads off'
         'set strsiz 0.1 0.1'
         'set t 'time
-        'run 'base_path'/grads/data/set_parea.gs 'row' 'col' 'i' 'j''
+        'run 'base_path'/src/set_parea.gs 'row' 'col' 'i' 'j''
         'set xlab .'
         'set ylab .'
         'set gxout shaded'
@@ -74,7 +74,7 @@ while (year <= 2019)
         'd skip(u,'q');skip(v,'q')'
       
 
-        'draw shp 'base_path'/grads/data/br.shp'
+        'draw shp 'base_path'/src/br.shp'
 
         xpl_siz=(x_siz-2*o_marg-(col-1)*i_marg)/col
         ypl_siz=(y_siz-2*o_marg-(row-1)*i_marg)/row
@@ -92,7 +92,7 @@ while (year <= 2019)
         xmid = (xmax+xmin)/2
         ymid = (ymax+ymin)/2
 
-        'run 'base_path'/grads/data/cbarn.gs 0.35 1 'xmid+1' 'ymid''
+        'run 'base_path'/src/cbarn.gs 0.35 1 'xmid+1' 'ymid''
         'draw recf 'xmin+0.33' 'ymin+0.33''
         'set string 0 c 5'
         'set strsiz 0.1'
