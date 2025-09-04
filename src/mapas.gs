@@ -1,3 +1,4 @@
+base_path = /home/felpelon
 
 mlist.1 = 1                                                            
 mlist.2 = 2
@@ -35,7 +36,7 @@ q = (2*r-1)*(2*r-1)
 p = (5-2*r)/10
 
 while (year <= 2025)
-  'sdfopen /home/felpelon/dust/'year'/'year'-'variable_name'-v.nc'
+  'sdfopen 'base_path'/dust/'year'/'year'-'variable_name'-v.nc'
   'set lev 850'
 
 *SANTA CATARINA
@@ -80,7 +81,7 @@ while (year <= 2025)
       'd skip(u,'q');skip(v,'q')'
       
 
-      'draw shp /home/felpelon/grads/data/br.shp'
+      'draw shp 'base_path'/grads/data/br.shp'
       montext = monname.tval
       'draw string 4 8 Mes: 'mes''
       'draw string 6 8 Pressao: 850hPa'
@@ -93,13 +94,13 @@ while (year <= 2025)
       endif
       'draw string 9.15 8 PM10'
       'draw string 2 8 Ano: 'year''
-      'run /home/felpelon/grads/data/cbarn.gs'
+      'run 'base_path'/grads/data/cbarn.gs'
 
 *por mês
       fname =''regiao'_'year'_'time'_'mes'_850hpa.png'
 *por pressão
 *fname = ''regiao'_850hpa_'time''mes'_'year'.png'
-      cmd = 'printim /home/felpelon/grads/Mapas/'year'/PM10/America_Latina/'fname
+      cmd = 'printim 'base_path'/grads/Mapas/'year'/PM10/America_Latina/'fname
       cmd
 
     time = time + 1

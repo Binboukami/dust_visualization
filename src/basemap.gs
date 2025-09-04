@@ -1,3 +1,5 @@
+base_path = /home/felpelon
+
 mlist.1 = 1
 mlist.2 = 2
 mlist.3 = 3
@@ -44,7 +46,7 @@ while (i <= 12)
     'set grads off'
     'clear'
     'd skip(u,1);skip(v,1)'
-    'draw shp /home/felpelon/grads/data/br.shp'
+    'draw shp 'base_path'/grads/data/br.shp'
     montext = monname.tval
     draw1 = 'draw string 10 90 "Mês: 'montext'"'
     draw2 = 'draw string 10 85 "Pressão: 'pval'hPa"'

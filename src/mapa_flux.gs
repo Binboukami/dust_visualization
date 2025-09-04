@@ -1,5 +1,6 @@
+base_path = /home/felpelon
 
-'sdfopen /home/felpelon/Vento/test_fluxo_de_massa_renamed2.nc'
+'sdfopen 'base_path'/Vento/test_fluxo_de_massa_renamed2.nc'
 'set lat -56 11'
 'set lon -83 -29'
 'set gxout vector'

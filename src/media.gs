@@ -1,3 +1,5 @@
+base_path = /home/felpelon
+
 monname.1 = "janeiro"
 monname.2 = "fevereiro"
 monname.3 = "marco"
@@ -18,7 +20,7 @@ r = 2
 q = (2*r-1)*(2*r-1)
 p = (5-2*r)/10
 
-'sdfopen /home/felpelon/2024dv.nc'
+'sdfopen 'base_path'/2024dv.nc'
 
 *SANTA CATARINA
 *'set lat -30 -25.5'

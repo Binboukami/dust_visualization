@@ -1,3 +1,5 @@
+base_path = /home/felpelon
+
 year = 2019
 variable_name = PM
 
@@ -34,7 +36,7 @@ monname.12 = "dez"
 
 *while (year <= 2024)
 while (year <= 2019)
-    'sdfopen /home/felpelon/dust/'year'/'year'-'variable_name'-v.nc'
+    'sdfopen 'base_path'/dust/'year'/'year'-'variable_name'-v.nc'
     'set lev 850'
 
 *SANTA CATARINA
@@ -59,7 +61,7 @@ while (year <= 2019)
         'set grads off'
         'set strsiz 0.1 0.1'
         'set t 'time
-        'run /home/felpelon/grads/data/set_parea.gs 'row' 'col' 'i' 'j''
+        'run 'base_path'/grads/data/set_parea.gs 'row' 'col' 'i' 'j''
         'set xlab .'
         'set ylab .'
         'set gxout shaded'
@@ -72,7 +74,7 @@ while (year <= 2019)
         'd skip(u,'q');skip(v,'q')'
       
 
-        'draw shp /home/felpelon/grads/data/br.shp'
+        'draw shp 'base_path'/grads/data/br.shp'
 
         xpl_siz=(x_siz-2*o_marg-(col-1)*i_marg)/col
         ypl_siz=(y_siz-2*o_marg-(row-1)*i_marg)/row
@@ -90,7 +92,7 @@ while (year <= 2019)
         xmid = (xmax+xmin)/2
         ymid = (ymax+ymin)/2
 
-        'run /home/felpelon/grads/data/cbarn.gs 0.35 1 'xmid+1' 'ymid''
+        'run 'base_path'/grads/data/cbarn.gs 0.35 1 'xmid+1' 'ymid''
         'draw recf 'xmin+0.33' 'ymin+0.33''
         'set string 0 c 5'
         'set strsiz 0.1'
@@ -105,7 +107,7 @@ while (year <= 2019)
     endwhile
 
     fname =''regiao'_'year'_comparar_850hpa.png'
-    cmd = 'printim /home/felpelon/grads/Mapas/'year'/PM10/America_Latina/'fname' x3000 y2000'
+    cmd = 'printim 'base_path'/grads/Mapas/'year'/PM10/America_Latina/'fname' x3000 y2000'
     cmd
     'close 1'
     year = year + 1

@@ -1,3 +1,5 @@
+base_path = /home/felpelon
+
 'clear'
 'set lat -30 -25.5'
 'set lon -54 -48'
@@ -18,6 +20,6 @@
 'set clevs 0 1e-9 2e-9 3e-9 4e-9 5e-9 6e-9 7e-9 8e-9 9e-9 1e-8'
 'set ccols 16 17 18 19 20 21 22 23 24 25 26'
 'd dusmass'
-'draw shp /home/felpelon/grads/data/br.shp'
+'draw shp 'base_path'/grads/data/br.shp'
 
 *set ccols 0 1 2 3 4 5 6 7 8 9 10
